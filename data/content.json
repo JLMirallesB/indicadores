@@ -1,0 +1,180 @@
+{
+  "locales": {
+    "es": {
+      "trafficLight": {
+        "green": {
+          "title": "Verde",
+          "action": "Acción: continuar.",
+          "description": "El indicador transmite una señal clara y compartida: puedes seguir con normalidad."
+        },
+        "amber": {
+          "title": "Ámbar",
+          "action": "Acción: revisar criterio antes de decidir.",
+          "description": "Sin umbral explícito, el equipo puede reaccionar de forma incoherente ante el mismo dato."
+        },
+        "red": {
+          "title": "Rojo",
+          "action": "Acción: detener y activar respuesta.",
+          "description": "El indicador marca una alerta operativa: hay que intervenir."
+        }
+      },
+      "amber": {
+        "frenar": "Lectura prudente: ante incertidumbre, priorizas reducir riesgo y recopilar más información.",
+        "acelerar": "Lectura oportunista: asumes que todavía hay margen y priorizas mantener ritmo."
+      },
+      "motives": {
+        "enfermedad": "El motivo reduce la severidad porque suele ser coyuntural.",
+        "horario": "La incompatibilidad horaria mantiene la alerta: requiere ajuste organizativo.",
+        "desmotivacion": "La desmotivación aumenta la severidad: puede anticipar abandono.",
+        "familia": "El contexto familiar complejo suele exigir intervención coordinada y seguimiento."
+      },
+      "dilemma": {
+        "entrada": {
+          "title": "Postura A: centro selectivo",
+          "text": "Que acceda alumnado con nota alta puede reflejar prestigio y demanda. Pero también puede significar que el resultado final depende, en gran parte, del nivel previo del alumnado."
+        },
+        "valor_anadido": {
+          "title": "Postura B: centro de valor añadido",
+          "text": "Si el centro logra progreso claro entre entrada y salida, su aporte educativo es mayor. El reto es medir ese progreso con criterios rigurosos y no solo con notas internas."
+        }
+      },
+      "optativaCase": {
+        "root": "Dato base: cantidad de alumnado matriculado en una asignatura optativa.",
+        "scenarios": {
+          "pocos": {
+            "positive": {
+              "title": "Rama positiva: grupo pequeño con valor pedagógico",
+              "text": "Puede favorecer seguimiento individual, más feedback y mayor profundidad de trabajo."
+            },
+            "negative": {
+              "title": "Rama crítica: baja matrícula por desajuste",
+              "text": "Puede reflejar falta de interés, baja difusión o incompatibilidad horaria."
+            }
+          },
+          "muchos": {
+            "positive": {
+              "title": "Rama positiva: alta demanda real",
+              "text": "Puede indicar que la optativa conecta con intereses del alumnado y responde a una necesidad formativa."
+            },
+            "negative": {
+              "title": "Rama crítica: masificación",
+              "text": "Puede deteriorar la atención personalizada y dificultar el logro de objetivos de aprendizaje."
+            }
+          }
+        }
+      },
+      "cards": {
+        "input": [
+          {
+            "id": "coste-estudiante",
+            "indicator": "Coste por estudiante",
+            "positive": "Lectura positiva: a menor coste, mayor eficiencia de la institución.",
+            "negative": "Lectura negativa: reducir coste puede implicar masificación y pérdida de calidad educativa."
+          }
+        ],
+        "output": [
+          {
+            "id": "nota-media-alta",
+            "indicator": "Nota media alta",
+            "positive": "Lectura positiva: los alumnos dominan la materia.",
+            "negative": "Lectura negativa: el profesor es poco exigente."
+          },
+          {
+            "id": "abandono",
+            "indicator": "Tasa de abandono alta",
+            "positive": "Lectura positiva: es un centro exigente y se produce una criba de alumnado; no se cumplen expectativas porque parte del alumnado esperaba algo más fácil y no quería un centro de especialización.",
+            "negative": "Lectura negativa: el centro no es capaz de retener al alumnado (desmotivación, traslado a otro centro o problemas de compatibilidad horaria)."
+          }
+        ]
+      }
+    },
+    "val": {
+      "trafficLight": {
+        "green": {
+          "title": "Verd",
+          "action": "Acció: continuar.",
+          "description": "L'indicador transmet un senyal clar i compartit: pots continuar amb normalitat."
+        },
+        "amber": {
+          "title": "Ambre",
+          "action": "Acció: revisar el criteri abans de decidir.",
+          "description": "Sense llindar explícit, l'equip pot reaccionar de manera incoherent davant la mateixa dada."
+        },
+        "red": {
+          "title": "Roig",
+          "action": "Acció: aturar i activar resposta.",
+          "description": "L'indicador marca una alerta operativa: cal intervenir."
+        }
+      },
+      "amber": {
+        "frenar": "Lectura prudent: davant la incertesa, priorititzes reduir el risc i recopilar més informació.",
+        "acelerar": "Lectura oportunista: assumeixes que encara hi ha marge i priorititzes mantindre el ritme."
+      },
+      "motives": {
+        "enfermedad": "El motiu redueix la severitat perquè sol ser conjuntural.",
+        "horario": "La incompatibilitat horària manté l'alerta: requereix ajust organitzatiu.",
+        "desmotivacion": "La desmotivació augmenta la severitat: pot anticipar abandonament.",
+        "familia": "El context familiar complex sol exigir intervenció coordinada i seguiment."
+      },
+      "dilemma": {
+        "entrada": {
+          "title": "Postura A: centre selectiu",
+          "text": "Que accedisca alumnat amb nota alta pot reflectir prestigi i demanda. Però també pot significar que el resultat final depén, en gran part, del nivell previ de l'alumnat."
+        },
+        "valor_anadido": {
+          "title": "Postura B: centre de valor afegit",
+          "text": "Si el centre aconsegueix un progrés clar entre l'entrada i l'eixida, la seua aportació educativa és major. El repte és mesurar eixe progrés amb criteris rigorosos i no només amb notes internes."
+        }
+      },
+      "optativaCase": {
+        "root": "Dada base: quantitat d'alumnat matriculat en una assignatura optativa.",
+        "scenarios": {
+          "pocos": {
+            "positive": {
+              "title": "Branca positiva: grup menut amb valor pedagògic",
+              "text": "Pot afavorir el seguiment individual, més feedback i major profunditat de treball."
+            },
+            "negative": {
+              "title": "Branca crítica: baixa matrícula per desajust",
+              "text": "Pot reflectir falta d'interés, poca difusió o incompatibilitat horària."
+            }
+          },
+          "muchos": {
+            "positive": {
+              "title": "Branca positiva: alta demanda real",
+              "text": "Pot indicar que l'optativa connecta amb interessos de l'alumnat i respon a una necessitat formativa."
+            },
+            "negative": {
+              "title": "Branca crítica: massificació",
+              "text": "Pot deteriorar l'atenció personalitzada i dificultar l'assoliment dels objectius d'aprenentatge."
+            }
+          }
+        }
+      },
+      "cards": {
+        "input": [
+          {
+            "id": "coste-estudiante",
+            "indicator": "Cost per estudiant",
+            "positive": "Lectura positiva: a menor cost, major eficiència de la institució.",
+            "negative": "Lectura negativa: reduir cost pot implicar massificació i pèrdua de qualitat educativa."
+          }
+        ],
+        "output": [
+          {
+            "id": "nota-media-alta",
+            "indicator": "Nota mitjana alta",
+            "positive": "Lectura positiva: l'alumnat domina la matèria.",
+            "negative": "Lectura negativa: el professorat és poc exigent."
+          },
+          {
+            "id": "abandono",
+            "indicator": "Taxa d'abandonament alta",
+            "positive": "Lectura positiva: és un centre exigent i es produeix una criba d'alumnat; no es compleixen expectatives perquè part de l'alumnat esperava una opció més fàcil i no volia un centre d'especialització.",
+            "negative": "Lectura negativa: el centre no és capaç de retindre l'alumnat (desmotivació, trasllat a un altre centre o problemes de compatibilitat horària)."
+          }
+        ]
+      }
+    }
+  }
+}

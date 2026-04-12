@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indicadores | Dato vs Indicador</title>
+    <meta
+      name="description"
+      content="Material interactivo para distinguir dato e indicador y analizar interpretaciones en contexto educativo."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-layer" aria-hidden="true"></div>
+
+    <header class="site-header reveal">
+      <div class="lang-switch" role="group" id="lang-switch" aria-label="Seleccionar idioma">
+        <button class="lang-btn" data-lang="es" id="btn-lang-es">Castellano</button>
+        <button class="lang-btn" data-lang="val" id="btn-lang-val">Valencià</button>
+      </div>
+
+      <p class="eyebrow" id="txt-eyebrow">Módulo interactivo</p>
+      <h1 id="txt-main-title">Indicadores: un dato no decide por sí solo</h1>
+      <p class="lead" id="txt-main-lead">
+        Recorre la metáfora del semáforo, entra en el terreno ambiguo y examina cómo el mismo indicador
+        puede tener lecturas opuestas.
+      </p>
+    </header>
+
+    <main class="layout">
+      <section class="panel reveal" id="bloque-semaforo">
+        <div class="panel-head">
+          <p class="step" id="txt-step-1">Bloque 1</p>
+          <h2 id="txt-title-1">El semáforo como indicador</h2>
+        </div>
+        <p class="theory" id="txt-theory-1">
+          Un indicador útil no solo muestra un dato: orienta una acción. En un semáforo, cada color activa
+          una conducta compartida.
+        </p>
+
+        <div class="traffic-wrap">
+          <div class="traffic-light" role="group" id="traffic-group" aria-label="Semáforo interactivo">
+            <button class="light light-green" data-color="green" aria-label="Verde"></button>
+            <button class="light light-amber" data-color="amber" aria-label="Ámbar"></button>
+            <button class="light light-red" data-color="red" aria-label="Rojo"></button>
+          </div>
+
+          <div class="action-buttons" role="group" id="traffic-actions" aria-label="Seleccionar color">
+            <button class="chip" data-color="green" id="txt-chip-green">Verde</button>
+            <button class="chip" data-color="amber" id="txt-chip-amber">Ámbar</button>
+            <button class="chip" data-color="red" id="txt-chip-red">Rojo</button>
+          </div>
+        </div>
+
+        <article id="semaforo-feedback" class="feedback"></article>
+      </section>
+
+      <section class="panel reveal" id="bloque-ambar">
+        <div class="panel-head">
+          <p class="step" id="txt-step-2">Bloque 2</p>
+          <h2 id="txt-title-2">El caso ámbar: cuando aparece la ambigüedad</h2>
+        </div>
+        <p class="theory" id="txt-theory-2">
+          El ámbar evidencia que, sin criterio previo, dos personas pueden leer el mismo indicador de forma
+          distinta.
+        </p>
+
+        <div class="choice-row" role="group" id="amber-choice-group" aria-label="Decisión ante ámbar">
+          <button class="decision" data-choice="frenar" id="txt-amber-brake">Yo freno</button>
+          <button class="decision" data-choice="acelerar" id="txt-amber-accelerate">Yo acelero</button>
+        </div>
+
+        <article id="ambar-feedback" class="feedback"></article>
+      </section>
+
+      <section class="panel reveal" id="bloque-absentismo">
+        <div class="panel-head">
+          <p class="step" id="txt-step-3">Bloque 3</p>
+          <h2 id="txt-title-3">Del semáforo al absentismo</h2>
+        </div>
+        <p class="theory" id="txt-theory-3a">
+          Este bloque muestra por qué el mismo porcentaje de faltas puede significar cosas muy distintas.
+          Un 12% de absentismo no tiene el mismo valor si el umbral aceptable es 10% o 18%, ni si el motivo
+          principal es enfermedad puntual o desmotivación sostenida.
+        </p>
+        <p class="theory" id="txt-theory-3b">
+          La idea es transformar un dato bruto en un indicador operativo: definir un umbral previo,
+          contextualizar el motivo y vincular el resultado a una decisión concreta (seguir, revisar o
+          intervenir).
+        </p>
+
+        <div class="controls-grid">
+          <label class="control">
+            <span id="txt-label-abs-rate">% de absentismo</span>
+            <output for="absent-rate" id="absent-rate-value">12%</output>
+            <input id="absent-rate" type="range" min="0" max="40" step="1" value="12" />
+          </label>
+
+          <label class="control">
+            <span id="txt-label-threshold">Umbral aceptable</span>
+            <output for="threshold-rate" id="threshold-rate-value">10%</output>
+            <input id="threshold-rate" type="range" min="3" max="20" step="1" value="10" />
+          </label>
+
+          <label class="control">
+            <span id="txt-label-motive">Motivo principal</span>
+            <select id="absent-motive">
+              <option value="enfermedad" id="txt-motive-enfermedad">Enfermedad puntual</option>
+              <option value="horario" id="txt-motive-horario">Incompatibilidad horaria</option>
+              <option value="desmotivacion" id="txt-motive-desmotivacion">Desmotivación</option>
+              <option value="familia" id="txt-motive-familia">Contexto familiar complejo</option>
+            </select>
+          </label>
+        </div>
+
+        <article id="absentismo-feedback" class="feedback"></article>
+      </section>
+
+      <section class="panel reveal" id="bloque-dilema">
+        <div class="panel-head">
+          <p class="step" id="txt-step-4">Bloque 4</p>
+          <h2 id="txt-title-4">Debate abierto: qué creemos que medimos</h2>
+        </div>
+        <p class="theory" id="txt-theory-4a">
+          Aquí no buscamos una respuesta cerrada. La pregunta de fondo es: ¿un centro es bueno porque atrae
+          alumnado brillante o porque hace progresar mucho a alumnado con niveles iniciales diversos?
+        </p>
+        <p class="theory" id="txt-theory-4b">
+          Dicho de forma provocadora: ¿qué es más meritorio, que entre alumnado brillante y salga más
+          brillante, o que entre alumnado con nivel medio y salga competente? La respuesta no es única y
+          depende de qué quieras valorar.
+        </p>
+        <p class="theory" id="txt-theory-4c">
+          Sacar buenas notas puede ser una buena señal, pero también puede depender de factores externos
+          (selección previa, apoyo fuera del centro o exigencia desigual). Pulsa cada postura para leer
+          argumentos contrapuestos.
+        </p>
+
+        <div class="dilemma-grid" role="group" id="dilemma-group" aria-label="Explorar posturas del debate">
+          <button class="dilemma-option" data-choice="entrada" id="txt-dilemma-entry">
+            Explorar postura: selección de entrada
+          </button>
+          <button class="dilemma-option" data-choice="valor_anadido" id="txt-dilemma-value">
+            Explorar postura: valor añadido
+          </button>
+        </div>
+
+        <article id="dilema-feedback" class="feedback"></article>
+      </section>
+
+      <section class="panel reveal" id="bloque-input">
+        <div class="panel-head">
+          <p class="step" id="txt-step-5">Bloque 5</p>
+          <h2 id="txt-title-5">Cartas de tres lados: indicadores de input</h2>
+        </div>
+        <p class="theory" id="txt-theory-5a">
+          Cada carta tiene un centro (el indicador) y dos giros posibles: lectura positiva y lectura
+          negativa.
+        </p>
+        <p class="theory" id="txt-theory-5b">
+          La clave didáctica es que un mismo indicador no habla solo: cambia de significado según el contexto,
+          los supuestos del equipo y la pregunta de evaluación que tengas delante. Por eso no basta con medir;
+          hay que interpretar con criterio explícito.
+        </p>
+
+        <div id="input-cards" class="tri-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="panel reveal" id="bloque-optativa">
+        <div class="panel-head">
+          <p class="step" id="txt-step-6">Bloque 6</p>
+          <h2 id="txt-title-6">Caso complejo: alumnado en asignatura optativa</h2>
+        </div>
+        <p class="theory" id="txt-theory-6a">
+          La cantidad de alumnado en una optativa no se interpreta en una sola dirección. Un grupo pequeño
+          puede leerse como atención personalizada o como bajo interés; un grupo grande puede leerse como alta
+          demanda o como riesgo de masificación.
+        </p>
+        <p class="theory" id="txt-theory-6b">
+          Explora ahora sus ramificaciones: parte de un mismo dato, cambia el escenario (pocos o muchos) y
+          añade factores de contexto. Verás cómo se activa una lectura más plausible sin que el dato original
+          cambie.
+        </p>
+
+        <div class="optativa-lab">
+          <div class="optativa-modes" role="group" id="optativa-modes" aria-label="Seleccionar escenario de matrícula">
+            <p class="mini-label" id="txt-optativa-mini-label">Escenario de partida</p>
+            <button class="optativa-mode" data-mode="pocos" id="txt-optativa-mode-pocos">Pocos matriculados</button>
+            <button class="optativa-mode" data-mode="muchos" id="txt-optativa-mode-muchos">Muchos matriculados</button>
+          </div>
+
+          <fieldset class="optativa-factors" id="optativa-factors">
+            <legend id="txt-optativa-legend">Factores de contexto</legend>
+          </fieldset>
+        </div>
+
+        <div class="optativa-tree" aria-live="polite">
+          <article class="tree-root" id="optativa-root"></article>
+          <div class="tree-branches">
+            <article class="branch-card branch-positive" id="optativa-branch-positive"></article>
+            <article class="branch-card branch-negative" id="optativa-branch-negative"></article>
+          </div>
+        </div>
+
+        <article id="optativa-feedback" class="feedback"></article>
+      </section>
+
+      <section class="panel reveal" id="bloque-output">
+        <div class="panel-head">
+          <p class="step" id="txt-step-7">Bloque 7</p>
+          <h2 id="txt-title-7">Cartas de tres lados: indicadores de output</h2>
+        </div>
+        <p class="theory" id="txt-theory-7">
+          Sin contexto adicional, los indicadores de resultado también pueden apuntar a explicaciones opuestas.
+        </p>
+
+        <div id="output-cards" class="tri-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="panel reveal" id="bloque-cierre">
+        <div class="panel-head">
+          <p class="step" id="txt-step-8">Bloque 8</p>
+          <h2 id="txt-title-8">Cierre: ¿tu indicador está listo para decidir?</h2>
+        </div>
+        <p class="theory" id="txt-theory-8">
+          Verifica mínimos antes de usar el indicador en un plan de mejora.
+        </p>
+
+        <form id="checklist" class="checklist">
+          <label><input type="checkbox" name="criterio" value="umbral" /> <span id="txt-check-umbral">Tiene umbral explícito.</span></label>
+          <label><input type="checkbox" name="criterio" value="fuente" /> <span id="txt-check-fuente">Tiene fuente verificable.</span></label>
+          <label><input type="checkbox" name="criterio" value="alternativas" /> <span id="txt-check-alternativas">Considera interpretaciones alternativas.</span></label>
+          <label><input type="checkbox" name="criterio" value="triangulacion" /> <span id="txt-check-triangulacion">Tiene indicador complementario.</span></label>
+        </form>
+
+        <div class="final-actions">
+          <button id="evaluate-btn" class="primary" type="button">Evaluar solidez</button>
+        </div>
+
+        <article id="final-feedback" class="feedback"></article>
+      </section>
+    </main>
+
+    <footer class="site-footer reveal">
+      <p>
+        <span id="txt-footer-intro">App diseñada por</span>
+        <a id="lnk-author" href="https://www.jlmirall.es" target="_blank" rel="noopener noreferrer"
+          >José Luis Miralles Bono</a
+        >
+        <span id="txt-footer-middle">con ayuda de Codex.</span>
+      </p>
+      <p class="footer-links">
+        <a id="lnk-repo" href="https://github.com/JLMirallesB/indicadores" target="_blank" rel="noopener noreferrer"
+          >Enlace al repo de GitHub</a
+        >
+        <span aria-hidden="true">·</span>
+        <a id="lnk-kofi" href="https://ko-fi.com/miralles" target="_blank" rel="noopener noreferrer"
+          >Invítame a una horchata</a
+        >
+      </p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
