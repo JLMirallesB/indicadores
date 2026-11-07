@@ -678,3 +678,8 @@ select {
     transform: none;
   }
 }
+
+.footer-licencia {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}

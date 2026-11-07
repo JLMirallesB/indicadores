@@ -203,7 +203,9 @@ const UI_TEXTS = {
         "Recorre la metáfora del semáforo, entra en el terreno ambiguo y examina cómo el mismo indicador puede tener lecturas opuestas.",
       footerIntro: "App diseñada por",
       footerAuthor: "José Luis Miralles Bono",
-      footerMiddle: "con ayuda de Codex.",
+      footerMiddle: "con ayuda de Codex",
+      footerMore: "Más información sobre este proyecto",
+      footerLicense: 'Código bajo licencia <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license" target="_blank">AGPL v3</a> · contenidos bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="license" target="_blank">CC BY-SA 4.0</a> · <a href="https://github.com/JLMirallesB/indicadores" target="_blank" rel="noopener">código fuente</a>',
       footerRepo: "Enlace al repo de GitHub",
       footerKofi: "Invítame a una horchata"
     },
@@ -403,7 +405,9 @@ const UI_TEXTS = {
         "Recorre la metàfora del semàfor, entra en el terreny ambigu i examina com el mateix indicador pot tindre lectures oposades.",
       footerIntro: "App dissenyada per",
       footerAuthor: "José Luis Miralles Bono",
-      footerMiddle: "amb ajuda de Codex.",
+      footerMiddle: "amb ajuda de Codex",
+      footerMore: "Més informació sobre aquest projecte",
+      footerLicense: 'Codi amb llicència <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license" target="_blank">AGPL v3</a> · continguts amb llicència <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ca" rel="license" target="_blank">CC BY-SA 4.0</a> · <a href="https://github.com/JLMirallesB/indicadores" target="_blank" rel="noopener">codi font</a>',
       footerRepo: "Enllaç al repo de GitHub",
       footerKofi: "Convida'm a una orxata"
     },
@@ -745,6 +749,8 @@ function applyStaticText() {
   setText("txt-footer-middle", ui.page.footerMiddle);
   setText("lnk-repo", ui.page.footerRepo);
   setText("lnk-kofi", ui.page.footerKofi);
+  setText("lnk-more", ui.page.footerMore);
+  document.getElementById("txt-license").innerHTML = ui.page.footerLicense;
   setText("btn-lang-es", ui.page.langEs);
   setText("btn-lang-val", ui.page.langVal);
 
